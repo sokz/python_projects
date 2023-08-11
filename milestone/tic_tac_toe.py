@@ -24,7 +24,9 @@ def display_board(board):
 
 
 # Function to take in a player input and assign marker 'X' or 'O'
-def player_input():
+def player_input(player_choice):
+    if player_choice = 'X':
+        
     
 
 
