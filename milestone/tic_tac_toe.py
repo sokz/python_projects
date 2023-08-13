@@ -11,29 +11,38 @@ def display_board(board):
 
     system("cls")
     print("   |   |")
-    print(f" {board[6]} | {board[7]} | {board[8]}")
+    print(f" {board[7]} | {board[8]} | {board[9]}")
     print("   |   |")
     print("____________")
     print("   |   |")
-    print(f" {board[3]} | {board[4]} | {board[5]}")
+    print(f" {board[4]} | {board[5]} | {board[6]}")
     print("   |   |")
     print("____________")
     print("   |   |")
-    print(f" {board[0]} | {board[1]} | {board[2]}")
+    print(f" {board[1]} | {board[2]} | {board[3]}")
     print("   |   |")
 
 
 # Function to take in a player input and assign marker 'X' or 'O'
-def player_input(player_choice):
-    if player_choice = 'X':
-        
+def player_input():
+    marker = ''
+
+    while not (marker == 'X' or marker == 'O'):
+        marker = input('Player 1: Do you want to be X or O?').upper()
     
+    if marker == 'X':
+        return('X', 'O')
+    else:
+        return('O', 'X')
 
 
+# Function that takes the board input and a desired position number and assign to the board
 
-
+def place_marker(board, marker, position):
+    board[position] = marker
 
 test_board = ['#','X','O','X','O','X','O','X','O','X']
+place_marker(test_board, '$', 8)
 display_board(test_board)
 
 # Main function where the flow of control happens
